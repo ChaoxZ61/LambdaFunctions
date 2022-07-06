@@ -27,6 +27,8 @@ ttList = []
 for i in listFiltered:
     if i["neighborhood"] not in neighbor:
         neighbor.append(i["neighborhood"])
+        
+# neighbor = reduce(lambda aList, x: aList.append(x) if (x not in aList) else aList, listFiltered,[])
 
 for i in neighbor:
     current = list(filter(lambda x: x["neighborhood"] == i, listFiltered))
